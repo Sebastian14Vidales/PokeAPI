@@ -31,10 +31,10 @@ function mostrarDatos(datos) {
   
   const experiencia = document.querySelector(".experiencia"); 
 
-  divImagen.classList.add('relative', 'bg-gray-300', 'h-44', 'mx-0')
+  divImagen.classList.add('relative', 'bg-gray-300', 'rounded-t-lg', 'h-44', 'mx-0')
   imagen.src = `${pokemon.imgCvg}`;
   imagen.alt = `Imagen ${pokemon.nombre}`;
-  imagen.classList.add('rounded','absolute', 'top-0', 'left-8', 'mt-6', 'px-10', 'my-0', 'mx-auto', 'bg-cover', 'bg-center', 'w-80', 'h-60');
+  imagen.classList.add('rounded-full','border','border-2', 'bg-white', 'absolute', 'top-0', 'left-16', 'mt-6', 'my-0', 'mx-auto', 'bg-cover', 'bg-center', 'w-60', 'h-60');
   titulo.classList.add('mt-24');
   titulo.innerHTML = `
     ${pokemon.nombre}
@@ -42,7 +42,6 @@ function mostrarDatos(datos) {
     <h2 class="text-lg text-blue-700">${pokemon.experiencia} <span class="text-sm">exp</span> </h2>
     `;
   divImagen.appendChild(imagen);
-  console.log(divImagen);
 
   experiencia.classList.add('flex', 'justify-between', 'py-4', 'border-t', 'border-gray-200')
   experiencia.innerHTML = `
@@ -51,8 +50,7 @@ function mostrarDatos(datos) {
     <h2 class="uppercase font-bold text-center text-blue-700">Especial <br><span class="text-gray-400">${pokemon.especial}K</span></h2> 
     
   `;
-  
-  console.log(imagen);
+ 
 }
 
 function limpiarHTML(divImagen) {

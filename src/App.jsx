@@ -1,13 +1,10 @@
-import { useState } from "react";
 import { getAleatorio, getPokemon } from "./components/PokemonAleatorio";
 
 function App() {
-  const [poke, setPoke] = useState(0);
-
+  
   function handleClick(e) {
+    e.preventDefault();
     const id = getAleatorio(1, 152);
-    setPoke(id);
-    console.log(`Obtuvo el valor de: ${id}`);
     getPokemon(id);
   }
 
@@ -18,13 +15,13 @@ function App() {
         </div>
         <div className="p-5">
           <p className="mb-2 titulo text-center uppercase text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Noteworthy technology acquisitions 2021
+            Lanza la bola y descubre el nuevo Pokemon
           </p>
           
           <div className="pokeInfo">
             <div className="mb-6 experiencia font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021 so
-              far, in reverse chronological order.
+              Estás a punto de empezar el juego donde podrás observar las habilidades de tus Pokemon.
+              ¡Lanza la bola y mira tu card!
             </div>
           </div>
           <a
