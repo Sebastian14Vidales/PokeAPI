@@ -1,5 +1,6 @@
 import { getAleatorio, getPokemon } from "./components/PokemonAleatorio";
 
+
 function App() {
   
   function handleClick(e) {
@@ -30,7 +31,7 @@ function App() {
             onClick={handleClick}
           >
             Generar Pokemon
-            <img className="ms-2 w-5" src="../public/poke.svg" alt="pokebola" />
+            <img className="ms-2 w-5" src="/poke.svg" alt="pokebola" />
           </a>
         </div>
       </div>
